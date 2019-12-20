@@ -6,8 +6,13 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent } from './app.component';
 import { UploadsComponent } from './uploads/uploads.component';
 import { VideoComponent } from './video/video.component';
+import { HomeComponent } from './home/home.component';
+
+
 
 import { AppRoutingModule }     from './app-routing.module';
+import { UserComponent } from './user/user.component';
+
 
 
 
@@ -20,7 +25,10 @@ import { AppRoutingModule }     from './app-routing.module';
   declarations: [
     AppComponent,
     UploadsComponent,
-    VideoComponent
+    VideoComponent,
+    HomeComponent,
+    HomeComponent,
+    UserComponent
   ],
   bootstrap: [AppComponent]
 })
