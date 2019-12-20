@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
+
     <nav class="navbar navbar-light bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="https://i.ytimg.com/vi/BfH_zx2bd50/maxresdefault.jpg" width="150" height="60" class="d-inline-block align-top" alt="">
+        <img src="https://github.com/rond556/youflixfrontend/blob/master/src/assets/maxresdefault.jpg?raw=true" width="150" height="60" class="d-inline-block align-top" alt="">
       </a>
       <nav class="navbar navbar-light bg-dark">
         <form class="form-inline">
@@ -21,35 +13,19 @@
     <nav class="navbar navbar-light bg-light">
       <form class="menuoptions">
         <a routerLink="/home">Home</a>
-        <a routerLink="/upload">Upload</a>
-        <a routerLink="/videos">Videos</a>
+        <a routerLink="/uploads">Upload</a>
+        <a routerLink="/video">Videos</a>
         <a routerLink="/user">User</a>
       </form>
     </nav>
 
-    
-    <div class="videoplayer">
-      <h1>Video title</h1>
-      <video class="library" controls preload="auto" data-config="some-js-object-here">
-        <source src="" type='video/mp4'>
-      </video>
-      <script src="video-library.js"></script>
-      <p>Video description</p>
-    </div>
-    <div class="videouploader">
-      <textarea cols="50" rows="1">
-        Video title 
-        </textarea>
-        <form action="upload.php" method="post" enctype="multipart/form-data"> Select video to upload:
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Video" name="submit">
-          </form>
-        </div>
-    
+    <router-outlet></router-outlet>
 
+
+
+
+    
 
   <nav class="navbar fixed-bottom navbar-light bg-light">
     <p>A SpringBoot Video Sharing App by Mike, Ron, Jack, and Ben</p>
   </nav>
-  </body>
-</html>
