@@ -19,25 +19,27 @@
       </nav>
     </nav>
     <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <button class="btn btn-outline-success" type="button">Home</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button">Videos</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button">User</button>
+      <form class="menuoptions">
+        <a routerLink="/home">Home</a>
+        <a routerLink="/upload">Upload</a>
+        <a routerLink="/videos">Videos</a>
+        <a routerLink="/user">User</a>
       </form>
     </nav>
+
+    <div class="videoplayer">
+      <h1>Video title</h1>
+      <video class="library" controls preload="auto" data-config="some-js-object-here">
+        <source src="" type='video/mp4'>
+      </video>
+      <script src="video-library.js"></script>
+      <p>Video description</p>
+      <textarea cols="50" rows="5">
+      Comments... 
+      </textarea>
+    </div>
     
-  <div class="videoplayer">
-    <h1>Video title</h1>
-    <video class="library" controls preload="auto" data-config="some-js-object-here">
-      <source src="" type='video/mp4'>
-    </video>
-    <script src="video-library.js"></script>
-    <p>Video description</p>
-    <textarea cols="50" rows="5">
-    Comments... 
-    </textarea>
-      
-  </div>
+
 
   <nav class="navbar fixed-bottom navbar-light bg-light">
     <p>A SpringBoot Video Sharing App by Mike, Ron, Jack, and Ben</p>
