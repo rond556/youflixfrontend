@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './user/user.component';
-
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 
@@ -20,7 +20,8 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     UserComponent
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
