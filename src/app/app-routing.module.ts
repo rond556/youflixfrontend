@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import * as AWS from 'aws-sdk/global';
+import * as S3 from 'aws-sdk/clients/s3';
 
 import { VideoComponent } from './video/video.component';
 import { UploadsComponent } from './uploads/uploads.component';
@@ -8,7 +10,7 @@ import { UserComponent } from './user/user.component';
 
 
 
-const routes: Routes = [
+const routes: Routes = [ 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'video', component: VideoComponent },
   { path: 'uploads', component: UploadsComponent },
