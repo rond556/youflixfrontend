@@ -1,11 +1,8 @@
 <div class="videouploader">
 <h1>Video title</h1>
 <textarea cols="50" rows="1">
-    Comments... 
+    Video title
 </textarea>
-<h3>Upload video</h3>
-<form action="upload.php" method="post" enctype="multipart/form-data"> Select video to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Video" name="submit">
-</form>
-</div>
+
+<h3 for="imageUpload">Video file</h3>
+  <input type="file" accept=".avi,.mp4,.wmv,.mov,.flv" (change)="fileEvent($event)" name="videoupload" id="videoupload"/>
