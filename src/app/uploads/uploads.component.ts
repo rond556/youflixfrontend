@@ -18,7 +18,7 @@ export class UploadsComponent implements OnInit {
     const region = 'us-east-1';
     const bucketName = 'zcw-group-videos';
     const IdentityPoolId = 'us-east-1:67bef216-708b-478e-ab63-81881097adaa';
-    const file = fileInput.target.files[0];
+    const file = fileInput.targe.files[0];
   //Configures the AWS service and initial authorization
     AWSService.config.update({
       region: region,
