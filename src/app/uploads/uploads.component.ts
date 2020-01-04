@@ -1,42 +1,28 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import * as AWS from 'aws-sdk';
-
-
+import { Component, OnInit } from '@angular/core';
+import { UploadService } from '../services/upload.service';
 
 @Component({
-  selector: 'app-uploads',
-  templateUrl: './uploads.component.html',
-  styleUrls: ['./uploads.component.scss']
+  selector: 'app-form-upload',
+  templateUrl: './form-upload.component.html',
+  styleUrls: ['./form-upload.component.css']
 })
-export class UploadsComponent implements OnInit {
-  
-  ngOnInit(){
-  }
-  
-  fileEvent(fileInput: any) {
-    const AWSService = AWS;
-    const region = 'us-east-1';
-    const bucketName = 'zcw-group-videos';
-    const IdentityPoolId = 'us-east-1:67bef216-708b-478e-ab63-81881097adaa';
-    const file = fileInput.target.files[0];
-  //Configures the AWS service and initial authorization
-    AWSService.config.update({
-      region: region,
-      credentials: new AWSService.CognitoIdentityCredentials({
-        IdentityPoolId: IdentityPoolId
-      })
-    });
-  //adds the S3 service, make sure the api version and bucket are correct
-    const s3 = new AWSService.S3({
-      apiVersion: '2006-03-01',
-      params: { Bucket: bucketName}
-    });
-  
-    s3.upload({ Key: file.name, Bucket: bucketName, Body: file, ACL: 'public-read'}, function (err, data) {
-     if (err) {
-       console.log(err, 'there was an error uploading your file');
-     }
-   });
+export class FormUploadComponent implements OnInit {
+
+  selectedFiles: FileList;
+
+  constructor(private uploadService: UploadService) { }
+
+  ngOnInit() {
   }
 
+  upload() {
+    const file = this.selectedFiles.item(0);
+    this.uploadService.uploadFile(file);
+  }
+
+  selectFile(event) {
+    this.selectedFiles = event.target.files;
+  }
 }
+
+

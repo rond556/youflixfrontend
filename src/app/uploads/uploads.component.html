@@ -1,8 +1,5 @@
-<div class="videouploader">
-<h1>Video title</h1>
-<input type='text' [(ngModel)]="videoupload">
+<label class="btn btn-default">
+  <input type="file" (change)="selectFile($event)">
+</label>
 
-<h3 for="imageUpload">Video file</h3>
-  <input type="file" accept=".avi,.mp4,.wmv,.mov,.flv" name="videoupload" id="videoupload"/>
-  
-<button (click)="fileEvent($event)">Upload</button>
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
