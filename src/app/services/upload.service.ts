@@ -12,25 +12,26 @@ export class UploadService {
   uploadFile(file) {
     const contentType = file.type;
     const bucket = new S3(
-          {
-              accessKeyId: 'YOUR-ACCESS-KEY-ID',
-              secretAccessKey: 'YOUR-SECRET-ACCESS-KEY',
-              region: 'YOUR-REGION'
-          }
-      );
-      const params = {
-          Bucket: 'YOUR-BUCKET-NAME',
-          Key: this.FOLDER + file.name,
-          Body: file,
-          ACL: 'public-read',
-          ContentType: contentType
-      };
-      bucket.upload(params, function (err, data) {
-          if (err) {
-              console.log('There was an error uploading your file: ', err);
-              return false;
-          }
-          console.log('Successfully uploaded file.', data);
-          return true;
-}
+      {
+        accessKeyId: 'AKIA2YVG7RZOFZPQG27Y',
+        secretAccessKey: '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',
+        region: 'us-east-1'
+      }
+    );
+    const params = {
+      Bucket: 'zcw-group-videos',
+      Key: file.name,
+      Body: file,
+      ACL: 'public-read',
+      ContentType: contentType
+    };
+    bucket.upload(params, function (err, data) {
+      if (err) {
+        console.log('There was an error uploading your file: ', err);
+        return false;
+      }
+      console.log('Successfully uploaded file.', data);
+      return true;
+    });
+  }
 }

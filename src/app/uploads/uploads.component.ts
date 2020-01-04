@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../services/upload.service';
 
 @Component({
-  selector: 'app-form-upload',
-  templateUrl: './form-upload.component.html',
-  styleUrls: ['./form-upload.component.css']
+  selector: 'app-uploads',
+  templateUrl: './uploads.component.html',
+  styleUrls: ['./uploads.component.scss']
 })
-export class FormUploadComponent implements OnInit {
+export class UploadsComponent implements OnInit {
 
   selectedFiles: FileList;
 
