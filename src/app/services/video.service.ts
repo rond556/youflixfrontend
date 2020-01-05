@@ -15,11 +15,11 @@ export class VideoService {
     this.videoURL = 'http://localhost:8080/videos';
    }
 
-   public findAll(): Observable<VideoFile[]>{
+   public findAllVideos(): Observable<VideoFile[]>{
      return this.http.get<VideoFile[]>(this.videoURL);
    }
 
-   public save(video: VideoFile) {
+   public saveVideo(video: VideoFile) {
      return this.http.post<VideoFile>(this.videoURL, video)
    }
 }
