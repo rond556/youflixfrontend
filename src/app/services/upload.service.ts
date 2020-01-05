@@ -7,15 +7,16 @@ import * as S3 from 'aws-sdk/clients/s3';
 })
 export class UploadService {
 
+
   constructor() { }
 
   uploadFile(file) {
     const contentType = file.type;
     const bucket = new S3(
       {
-        accessKeyId: 'AKIA2YVG7RZOFZPQG27Y',
-        secretAccessKey: '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',
-        region: 'us-east-1'
+        accessKeyId: '',
+        secretAccessKey: '',
+        region: ''
       }
     );
     const params = {
