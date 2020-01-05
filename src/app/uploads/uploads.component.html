@@ -10,6 +10,6 @@
 
 <label class="btn btn-default">
   <input type="file" accept=".avi,.mp4,.wmv,.mov,.flv" (change)="selectFile($event)" required>
-  <button class="btn btn-success" [disabled]="!selectedFiles || !title || !description" (click)="upload()">Upload</button>
+  <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
   </label>
 </form>
