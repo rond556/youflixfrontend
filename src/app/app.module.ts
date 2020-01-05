@@ -14,6 +14,7 @@ import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { UploadService } from './services/upload.service';
 import { UploadsComponent } from './uploads/uploads.component';
+import { VideoService } from './services/video.service';
 
 
 
@@ -33,7 +34,7 @@ import { UploadsComponent } from './uploads/uploads.component';
     HomeComponent,
     UserComponent
   ],
-  providers: [UploadService],
+  providers: [UploadService, VideoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
