@@ -1,15 +1,15 @@
-<form [formGroup] = "videoUploadForm" (ngSubmit)="onSubmit()">
+<form [formGroup] = "videoUploadForm" (ngSubmit)="onSubmit()" novalidate>
 <label>
-  Video title <input type="text" formControlName="title" size="100">
+  Video title <input type="text" formControlName="title" size="100" required>
 </label>
 <label>
-  Video description <input type="text" formControlName="description" size="180">
+  Video description <input type="text" formControlName="description" size="180" required>
 </label>
 
 
 
 <label class="btn btn-default">
-  <input type="file" accept=".avi,.mp4,.wmv,.mov,.flv" (change)="selectFile($event)">
-  <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+  <input type="file" accept=".avi,.mp4,.wmv,.mov,.flv" (change)="selectFile($event)" required>
+  <button class="btn btn-success" [disabled]="!selectedFiles || !title || !description" (click)="upload()">Upload</button>
   </label>
 </form>

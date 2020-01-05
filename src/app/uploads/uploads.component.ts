@@ -45,6 +45,8 @@ export class UploadsComponent implements OnInit {
   uploadVideoObjectToHeroku(newVideo: VideoFile){
 
   }
+
+  
 }
 
 
