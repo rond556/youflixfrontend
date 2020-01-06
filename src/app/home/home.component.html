@@ -3,8 +3,8 @@
     <div class="grid-row">
         <div *ngFor="let VideoFile of videos">
             <div class="card">
-                {{VideoFile.title}}
-                {{VideoFile.description}}
+                <a routerLink="/video">{{VideoFile.title}}</a>
+                <p>{{VideoFile.description}}</p>
             </div>
         </div>
     </div>
