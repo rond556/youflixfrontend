@@ -1,1 +1,11 @@
 <p>Welcome to the home page!</p>
+<div id="cardgrid" class="container">
+    <div class="grid-row">
+        <div *ngFor="let VideoFile of videos">
+            <div class="card">
+                {{VideoFile.title}}
+                {{VideoFile.description}}
+            </div>
+        </div>
+    </div>
+</div>
