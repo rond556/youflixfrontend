@@ -19,6 +19,7 @@ export class VideoService {
    }
 
    public findAllVideos(): Observable<VideoFile[]>{
+     console.log(this.videoURL);
      return this.http.get<VideoFile[]>(this.videoURL);
    }
 
