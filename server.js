@@ -23,6 +23,8 @@ app.use(cors())
 
 app.get('/*', function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for all origins!'})
+res.sendFile(path.join(__dirname,'/dist/angular-youflix-videoapp/index.html'));
+
 })
 
 app.listen(80, function () {
