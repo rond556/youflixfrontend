@@ -19,8 +19,7 @@ export class VideoService {
    }
 
    public findAllVideos(): Observable<VideoFile[]>{
-     console.log(this.videoURL);
-     return this.http.get<VideoFile[]>(this.videoURL);
+     return this.http.get<VideoFile[]>('https://safe-springs-62086.herokuapp.com/videos');
    }
 
    public saveVideo(video: VideoFile) {
