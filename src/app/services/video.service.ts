@@ -15,7 +15,7 @@ export class VideoService {
   private videoDescription: string;
 
   constructor(private http: HttpClient) {
-    this.videoURL = 'BACK_END_URL';
+    this.videoURL = 'https://safe-springs-62086.herokuapp.com/';
    }
 
    public findAllVideos(): Observable<VideoFile[]>{
