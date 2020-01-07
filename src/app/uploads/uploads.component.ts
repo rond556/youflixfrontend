@@ -39,7 +39,7 @@ export class UploadsComponent implements OnInit {
   createVideoObject(file: File){
     let name = file.name;
     this.newVideo = new VideoFile(this.videoUploadForm.value);
-    this.newVideo.url = "https://S3_BUCKET.amazonaws.com/zcw-group-videos/" + name;
+    this.newVideo.url = "https://s3-S3_REGION_ID.amazonaws.com/S3_BUCKET/" + name;
     console.log(this.newVideo);
     this.videoService.saveVideo(this.newVideo);
 
