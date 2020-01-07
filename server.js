@@ -14,4 +14,4 @@ res.sendFile(path.join(__dirname,'/dist/angular-youflix-videoapp/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(BACK_END_URL);
+app.listen(process.env.PORT || 80);
