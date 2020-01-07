@@ -15,7 +15,7 @@ export class VideoService {
   private videoDescription: string;
 
   constructor(private http: HttpClient) {
-    this.videoURL = 'http://localhost:8080/videos';
+    this.videoURL = 'BACK_END_URL';
    }
 
    public findAllVideos(): Observable<VideoFile[]>{
