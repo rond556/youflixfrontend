@@ -11,9 +11,19 @@
     transition: 0.3s;
   }
   .card:hover {
+    background-color: salmon;
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
   }
-  
+
   .container {
+    max-width: 1980px;
     padding: 2px 16px;
-  }
+}
+  .grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.videosList{
+    text-indent: 50px;
+}

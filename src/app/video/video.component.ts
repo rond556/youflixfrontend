@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from '../services/video.service';
 
 @Component({
   selector: 'app-video',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
+  url: string;
+  title: string;
+  description: string;
 
-  constructor() { }
+  constructor(private videoService: VideoService) {
+   }
 
   ngOnInit() {
+    this.url = this.videoService.getAwsUrl();
+    this.title = this.videoService.getVideoTitle();
+    this.description = this.videoService.getVideoDescription();
   }
 
 }
