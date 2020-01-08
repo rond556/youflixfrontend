@@ -1,0 +1,7 @@
+{
+    "/S3_BUCKET/*": {
+        "target": "https://s3-S3_REGION_ID.amazonaws.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

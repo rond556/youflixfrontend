@@ -71,7 +71,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-youflix-videoapp:build:production"
+              "browserTarget": "angular-youflix-videoapp:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
