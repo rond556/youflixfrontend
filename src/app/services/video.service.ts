@@ -23,7 +23,7 @@ export class VideoService {
    }
 
    public saveVideo(video: VideoFile) {
-     return this.http.post<VideoFile>(this.videoURL, video)
+     return this.http.post<VideoFile>('https://safe-springs-62086.herokuapp.com/videos', video)
    }
 
    public setAwsUrl(awsUrl: string){
