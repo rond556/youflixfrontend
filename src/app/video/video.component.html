@@ -1,8 +1,9 @@
-<h1 id="header" >Video title</h1>
+<h1 id="header" >{{this.title}}</h1>
 <div class="videoplayer">
-    <video width="640" height="640" class="library" controls preload="auto" data-config="some-js-object-here">
-      <source src={{video.url}} type='video/mp4'>
+    <video width="640" height="480" class="library" controls preload="auto" data-config="some-js-object-here">
+      <source src={{this.url}} type='video/mp4'>
     </video>
     <script src="video-library.js"></script>
-    <p>Video description</p>
+    <h3>Video Description</h3>
+    <p>{{this.description}}</p>
   </div>

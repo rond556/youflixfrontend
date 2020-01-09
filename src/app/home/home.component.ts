@@ -19,4 +19,11 @@ export class HomeComponent implements OnInit {
                  this.videos = result)
   }
 
+  storeVideoData(awsUrl: string, videoTitle: string, videoDescription: string){
+    this.videoService.setAwsUrl(awsUrl);
+    this.videoService.setVideoTitle(videoTitle);
+    this.videoService.setVideoDescription(videoDescription);
+  }
+
+
 }
