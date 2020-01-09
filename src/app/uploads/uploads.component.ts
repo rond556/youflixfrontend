@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../services/upload.service';
-import { VideoService } from '../services/video.service'
 
 import { FormGroup, FormControl } from '@angular/forms'
 import { VideoFile } from '../video-file.model';
+import { VideoService } from '../services/video.service';
 
 @Component({
   selector: 'app-uploads',
@@ -39,9 +39,8 @@ export class UploadsComponent implements OnInit {
   createVideoObject(file: File){
     let name = file.name;
     this.newVideo = new VideoFile(this.videoUploadForm.value);
-    this.newVideo.url = "https://s3-S3_REGION_ID.amazonaws.com/S3_BUCKET/" + name;
+    this.newVideo.url = "https://s3-us-east-1.amazonaws.com/youflixapplication/" + name;
     this.videoService.saveVideo(this.newVideo);
-
   }
 
   
