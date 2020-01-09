@@ -10,7 +10,7 @@ import { UserComponent } from './user/user.component';
 
 const routes: Routes = [ 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'video', component: VideoComponent, data : {some_data : 'some_value'}},
+  { path: 'video', component: VideoComponent },
   { path: 'uploads', component: UploadsComponent },
   { path: 'home', component: HomeComponent},
   { path: 'user', component: UserComponent}

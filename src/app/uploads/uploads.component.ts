@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../services/upload.service';
-import { VideoService } from '../services/video.service'
 
 import { FormGroup, FormControl } from '@angular/forms'
 import { VideoFile } from '../video-file.model';
@@ -20,7 +19,7 @@ export class UploadsComponent implements OnInit {
   selectedFiles: FileList;
   private newVideo: VideoFile = new VideoFile();
 
-  constructor(private uploadService: UploadService, private videoService: VideoService) { }
+  constructor(private uploadService: UploadService) { }
 
   ngOnInit() {
   }
@@ -39,8 +38,11 @@ export class UploadsComponent implements OnInit {
   createVideoObject(file: File){
     let name = file.name;
     this.newVideo = new VideoFile(this.videoUploadForm.value);
-    this.newVideo.url = "https://s3-S3_REGION_ID.amazonaws.com/S3_BUCKET/" + name;
-    this.videoService.saveVideo(this.newVideo);
+    this.newVideo.url = "https://s3-us-east-1.amazonaws.com/zcw-group-videos/" + name;
+    console.log(this.newVideo);
+  }
+
+  uploadVideoObjectToHeroku(newVideo: VideoFile){
 
   }
 

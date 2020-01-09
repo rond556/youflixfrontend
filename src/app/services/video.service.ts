@@ -10,45 +10,16 @@ import { Observable } from 'rxjs';
 export class VideoService {
 
   private videoURL: string;
-  private awsUrl: string;
-  private videoTitle: string;
-  private videoDescription: string;
 
   constructor(private http: HttpClient) {
-    this.videoURL = 'BACK_END_URL';
+    this.videoURL = 'http://localhost:8080/videos';
    }
 
    public findAllVideos(): Observable<VideoFile[]>{
-     return this.http.get<VideoFile[]>('https://safe-springs-62086.herokuapp.com/videos');
+     return this.http.get<VideoFile[]>(this.videoURL);
    }
 
    public saveVideo(video: VideoFile) {
-     return this.http.post<VideoFile>('https://safe-springs-62086.herokuapp.com/videos', video)
+     return this.http.post<VideoFile>(this.videoURL, video)
    }
-
-   public setAwsUrl(awsUrl: string){
-     this.awsUrl=awsUrl;
-   }
-
-   public getAwsUrl(): string{
-    return this.awsUrl;
-  }
-
-  public setVideoTitle(videoTitle: string){
-    this.videoTitle=videoTitle;
-  }
-
-  public getVideoTitle(): string{
-   return this.videoTitle;
- }
-
- public setVideoDescription(videoDescription: string){
-  this.videoDescription=videoDescription;
-}
-
-public getVideoDescription(): string{
- return this.videoDescription;
-}
-
-
 }
